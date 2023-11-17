@@ -1,0 +1,41 @@
+{
+  "name": "coffee-house",
+  "version": "1.0.0",
+  "description": "Coffee house Front-End",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Den1sproger/Coffee-house.git"
+  },
+  "keywords": [
+    "Coffe-house",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Front-End"
+  ],
+  "author": "Denis Strigo <strigodenis@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Den1sproger/Coffee-house/issues"
+  },
+  "homepage": "https://github.com/Den1sproger/Coffee-house#readme",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "postcss-loader": "^7.3.3",
+    "postcss-preset-env": "^9.3.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+}
