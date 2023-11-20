@@ -1,0 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'Inter';
+  display: flex;
+  flex-direction: column;
+  max-width: 1360px;
+  margin: 20px auto 40px auto;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background-color: $color-background-body;
+}
