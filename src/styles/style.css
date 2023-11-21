@@ -251,6 +251,7 @@ main {
   padding: 20px 78px;
   justify-content: center;
   align-items: center;
+  gap: 8px;
   border: 0;
   border-radius: 100px;
   text-align: center;
@@ -259,6 +260,12 @@ main {
   color: #403f3d;
   font-weight: 600;
   line-height: 150%;
+}
+.offer button img {
+  display: none;
+}
+.offer button:hover img {
+  display: block;
 }
 
 /* favorites-coffee section */

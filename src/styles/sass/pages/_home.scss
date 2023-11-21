@@ -63,6 +63,7 @@ main {
     padding: 20px 78px;
     justify-content: center;
     align-items: center;
+    gap: 8px;
     border: 0;
     border-radius: 100px;
     text-align: center;
@@ -70,7 +71,17 @@ main {
     background-color: $color-background-body;
     color: $color-text-dark;
     font-weight: 600;
-    line-height: 150%
+    line-height: 150%;
+
+    img {
+      display: none;
+    }
+
+    &:hover {
+      img {
+        display: block;
+      }
+    }
   }
 }
 
