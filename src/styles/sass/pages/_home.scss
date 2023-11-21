@@ -134,10 +134,8 @@ main {
 
     &:hover {
       background-color: $color-background-container;
-      svg {
-        path {
-          stroke: $color-text-light;
-        }
+      & path {
+        stroke: $color-text-light;
       }
     }
   }
