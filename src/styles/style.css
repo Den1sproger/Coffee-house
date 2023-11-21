@@ -40,6 +40,7 @@ header {
 }
 
 .nav__list {
+  padding: 0;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -56,14 +57,29 @@ header {
 
 .menu-page {
   display: flex;
-  height: 28px;
-  justify-content: flex-end;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   text-decoration: none;
 }
-.menu-page span {
+.menu-page:hover .menu-page__line {
+  background-color: #403f3d;
+}
+
+.menu-page__item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+.menu-page__item span {
   color: #403f3d;
+}
+
+.menu-page__line {
+  width: 100%;
+  height: 2px;
+  background-color: #e1d4c9;
 }
 
 #contact-us {
