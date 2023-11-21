@@ -218,3 +218,84 @@ main {
   background-color: $color-border-dark;
 }
 
+
+
+// about section
+#about {
+  display: flex;
+  max-width: 1360px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+
+  h2 {
+    color: $color-text-dark;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Desktop/Heading/heading-2 */
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 75px */
+    
+    span {
+      color: $color-text-accent;
+      font-style: italic;
+    }
+  }
+}
+
+
+.about__images {
+  display: flex;
+  max-width: 1360px;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+
+    .image-long {
+      width: 660px;
+      height: 590px;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    
+    .image-short {
+      width: 660px;
+      height: 430px;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  } 
+}
+
+
+
+
+
+
+
+
