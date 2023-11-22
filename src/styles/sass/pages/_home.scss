@@ -72,9 +72,11 @@ main {
     color: $color-text-dark;
     font-weight: 600;
     line-height: 150%;
+    cursor: pointer;
 
     img {
       display: none;
+      transition: all 0.3s;
     }
 
     &:hover {
@@ -142,6 +144,12 @@ main {
     border-radius: 100px;
     background-color: $color-background-body;
     border: 1px solid $color-border-dark;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    & path {
+      transition: all 0.3s;
+    }
 
     &:hover {
       background-color: $color-background-container;
@@ -363,6 +371,13 @@ main {
   border: 1px solid $color-border-dark;
   background-color: $color-background-body;
   color: $color-text-dark;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  & path {
+    transition: all 0.3s;
+  }
+
   &:hover {
     background-color: $color-background-container;
     color: $color-text-light;
