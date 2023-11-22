@@ -1,0 +1,10 @@
+@mixin tabs-active() {
+  background-color: $color-background-container;
+  span {
+    color: $color-text-light;
+  }
+
+  & > div {
+    background-color: $color-background-body;
+  }
+}
