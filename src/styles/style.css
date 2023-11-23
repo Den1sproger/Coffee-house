@@ -555,7 +555,7 @@ main {
   cursor: pointer;
   transition: all 0.3s;
 }
-.offer-button path {
+.offer-button path, .offer-button strong {
   transition: all 0.3s;
 }
 .offer-button:hover {
@@ -564,6 +564,9 @@ main {
 }
 .offer-button:hover path {
   fill: #e1d4c9;
+}
+.offer-button:hover strong {
+  color: #e1d4c9;
 }
 
 .offer-button__text {
@@ -580,8 +583,7 @@ main {
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
 }
-.offer-button__text h5 {
-  margin: 0;
+.offer-button__text strong {
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
@@ -644,7 +646,7 @@ main {
   border: 1px solid #c1b6ad;
   background-color: #e1d4c9;
 }
-.tabs button > div {
+.tabs button > strong {
   width: 30px;
   height: 30px;
   display: flex;
@@ -670,7 +672,7 @@ main {
 .tabs button:hover span {
   color: #e1d4c9;
 }
-.tabs button:hover > div {
+.tabs button:hover > strong {
   background-color: #e1d4c9;
 }
 
@@ -680,7 +682,7 @@ button.active {
 button.active span {
   color: #e1d4c9;
 }
-button.active > div {
+button.active > strong {
   background-color: #e1d4c9;
 }
 

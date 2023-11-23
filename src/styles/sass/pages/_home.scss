@@ -368,7 +368,7 @@ main {
   cursor: pointer;
   transition: all 0.3s;
 
-  & path {
+  & path, strong {
     transition: all 0.3s;
   }
 
@@ -377,6 +377,10 @@ main {
     color: $color-text-light;
     & path {
       fill: $color-text-light; 
+    }
+
+    & strong {
+      color: $color-text-light;
     }
   }
 }
@@ -396,8 +400,7 @@ main {
     font-feature-settings: 'clig' off, 'liga' off;
   }
   
-  h5 {
-    margin: 0;
+  strong {
     font-size: 16px;
     font-weight: 600;
     line-height: 150%;
