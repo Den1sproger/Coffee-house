@@ -692,6 +692,7 @@ button.active > div {
 }
 
 .product-card {
+  cursor: pointer;
   display: flex;
   height: 506px;
   width: 310px;
