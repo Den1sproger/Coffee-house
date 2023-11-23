@@ -52,6 +52,7 @@
     border-radius: 100px;
     border: 1px solid $color-border-light;
     background-color: $color-background-body;
+    transition: all 0.3s;
 
     & > strong {
       width: 30px;
@@ -65,6 +66,7 @@
       font-weight: 600;
       line-height: 150%;
       border-radius: 100px;
+      transition: all 0.3s;
     }
 
     span {
@@ -72,7 +74,8 @@
       font-feature-settings: 'clig' off, 'liga' off;
       font-size: 16px;
       font-weight: 600;
-      line-height: 150%
+      line-height: 150%;
+      transition: all 0.3s;
     }
 
     &:hover {

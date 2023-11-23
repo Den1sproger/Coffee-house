@@ -103,7 +103,6 @@ main {
     color: $color-text-dark;
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-size: 60px;
     font-weight: 600;
     line-height: 125%;
     span {
@@ -368,7 +367,11 @@ main {
   cursor: pointer;
   transition: all 0.3s;
 
-  & path, strong {
+  & path {
+    transition: all 0.3s;
+  }
+
+  & strong {
     transition: all 0.3s;
   }
 

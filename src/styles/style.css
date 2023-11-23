@@ -316,7 +316,6 @@ main {
   color: #403f3d;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
-  font-size: 60px;
   font-weight: 600;
   line-height: 125%;
 }
@@ -555,7 +554,10 @@ main {
   cursor: pointer;
   transition: all 0.3s;
 }
-.offer-button path, .offer-button strong {
+.offer-button path {
+  transition: all 0.3s;
+}
+.offer-button strong {
   transition: all 0.3s;
 }
 .offer-button:hover {
@@ -645,6 +647,7 @@ main {
   border-radius: 100px;
   border: 1px solid #c1b6ad;
   background-color: #e1d4c9;
+  transition: all 0.3s;
 }
 .tabs button > strong {
   width: 30px;
@@ -658,6 +661,7 @@ main {
   font-weight: 600;
   line-height: 150%;
   border-radius: 100px;
+  transition: all 0.3s;
 }
 .tabs button span {
   color: #403f3d;
@@ -665,6 +669,7 @@ main {
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
+  transition: all 0.3s;
 }
 .tabs button:hover {
   background-color: #665f55;
