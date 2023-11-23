@@ -276,28 +276,28 @@ main {
   line-height: 150%;
   color: #e1d4c9;
 }
-.offer button {
+.offer a {
   display: flex;
-  width: 200px;
-  padding: 20px 78px;
   justify-content: center;
   align-items: center;
+  width: 44px;
+  padding: 20px 78px;
+  color: #403f3d;
+  text-decoration: none;
   gap: 8px;
-  border: 0;
   border-radius: 100px;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
   background-color: #e1d4c9;
-  color: #403f3d;
   font-weight: 600;
   line-height: 150%;
   cursor: pointer;
 }
-.offer button img {
+.offer a img {
   display: none;
   transition: all 0.3s;
 }
-.offer button:hover img {
+.offer a:hover img {
   display: block;
 }
 

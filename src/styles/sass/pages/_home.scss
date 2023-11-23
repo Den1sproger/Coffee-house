@@ -56,30 +56,30 @@ main {
     color: $color-text-light;
   }
 
-  button {
+  a {
     display: flex;
-    width: 200px;
-    padding: 20px 78px;
     justify-content: center;
     align-items: center;
+    width: 44px;
+    padding: 20px 78px;
+    color: $color-text-dark;
+    text-decoration: none;
     gap: 8px;
-    border: 0;
     border-radius: 100px;
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
     background-color: $color-background-body;
-    color: $color-text-dark;
     font-weight: 600;
     line-height: 150%;
     cursor: pointer;
 
-    img {
+    & img {
       display: none;
       transition: all 0.3s;
     }
-
+  
     &:hover {
-      img {
+      & img {
         display: block;
       }
     }
