@@ -117,7 +117,6 @@ header {
 }
 
 h2 {
-  margin: 0;
   align-self: stretch;
   color: #e1d4c9;
   font-feature-settings: "clig" off, "liga" off;
@@ -166,7 +165,6 @@ h2 span {
 }
 
 .contact-us__info h4 {
-  margin: 0;
   align-self: stretch;
   color: #e1d4c9;
   font-feature-settings: "clig" off, "liga" off;
@@ -262,7 +260,6 @@ main {
   font-style: normal;
 }
 .offer h1 {
-  margin: 0;
   font-size: 72px;
   font-weight: 600;
   line-height: 105%;
@@ -316,7 +313,6 @@ main {
   font-style: normal;
 }
 #favorites-coffee h2 {
-  margin: 0;
   color: #403f3d;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
@@ -400,7 +396,6 @@ main {
   align-self: stretch;
 }
 .slide__content-description h4 {
-  margin: 0;
   color: #403f3d;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
@@ -409,7 +404,6 @@ main {
   line-height: 125%;
 }
 .slide__content-description p {
-  margin: 0;
   text-align: center;
   color: #403f3d;
   font-feature-settings: "clig" off, "liga" off;
@@ -523,7 +517,6 @@ main {
   font-style: normal;
 }
 .mobile-app__offer h2 {
-  margin: 0;
   color: #403f3d;
   font-size: 60px;
   font-weight: 600;
@@ -536,7 +529,6 @@ main {
   font-style: italic;
 }
 .mobile-app__offer p {
-  margin: 0;
   color: #403f3d;
   font-size: 16px;
   font-feature-settings: "clig" off, "liga" off;
@@ -622,7 +614,6 @@ main {
   align-self: stretch;
 }
 .menu__offer h1 {
-  margin: 0;
   max-width: 800px;
   color: #403f3d;
   text-align: center;
