@@ -670,7 +670,7 @@ main {
   max-width: 1360px;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
   align-self: stretch;
   font-style: normal;
@@ -766,12 +766,22 @@ button.active > strong {
   column-gap: 40px;
   row-gap: 40px;
 }
+@media (max-width: 1439px) {
+  .menu__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1089px) {
+  .menu__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 .product-card {
   cursor: pointer;
   display: flex;
   height: 506px;
-  width: 310px;
+  width: 308px;
   flex-direction: column;
   align-items: center;
   border-radius: 40px;
@@ -780,7 +790,7 @@ button.active > strong {
 }
 
 .product-card__image {
-  width: 310px;
+  width: 308px;
   height: 310px;
   flex-shrink: 0;
   border-radius: 40px;
