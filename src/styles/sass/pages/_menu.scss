@@ -78,8 +78,10 @@
       transition: all 0.3s;
     }
 
-    &:hover {
-      @include tabs-active;
+    @media (min-width: 1024px) {
+      &:hover {
+        @include tabs-active;
+      }
     }
   }
 }

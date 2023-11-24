@@ -43,9 +43,11 @@ header {
   text-decoration: none;
   cursor: pointer;
   
-  &:hover {
-    .menu-page__line {
-      background-color: $color-text-dark;
+  @media (min-width: 1024px) {
+    &:hover {
+      .menu-page__line {
+        background-color: $color-text-dark;
+      }
     }
   }
 }
