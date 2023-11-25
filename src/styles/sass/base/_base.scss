@@ -18,6 +18,9 @@ body {
   background-color: $color-background-body;
 }
 
+body.lock {
+  overflow-y: hidden;
+}
 
 h1,
 h2,
