@@ -13,12 +13,16 @@ body {
   flex-direction: column;
   max-width: 1360px;
   margin: 20px auto 40px auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 0 40px;
   justify-content: center;
   align-items: center;
   gap: 100px;
   background-color: #e1d4c9;
+}
+@media (max-width: 767px) {
+  body {
+    padding: 0 20px;
+  }
 }
 
 body.lock {
@@ -195,6 +199,16 @@ header {
     align-items: flex-start;
   }
 }
+@media (max-width: 1023px) {
+  #contact-us {
+    padding: 100px 60px;
+  }
+}
+@media (max-width: 767px) {
+  #contact-us {
+    padding: 60px 16px;
+  }
+}
 
 .contact-us__info,
 .contact-us__offer {
@@ -223,6 +237,14 @@ h2 span {
   font-style: italic;
   font-weight: 600;
   line-height: 125%;
+}
+@media (max-width: 767px) {
+  h2 {
+    font-size: 32px;
+  }
+  h2 span {
+    font-size: 32px;
+  }
 }
 
 .socials {
@@ -329,7 +351,6 @@ main {
   margin-top: -80px;
   width: 100%;
   max-width: 1360px;
-  height: 644px;
   border-radius: 40px;
   background: url("/src/assets/img/img-hero.png"), lightgray 50%/cover no-repeat;
   background-position: center;
@@ -341,17 +362,27 @@ main {
   max-width: 1160px;
   padding: 100px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
+}
+@media (max-width: 1023px) {
+  .enjoy__container {
+    padding: 100px 60px;
+  }
+}
+@media (max-width: 767px) {
+  .enjoy__container {
+    padding: 60px 16px;
+  }
 }
 
 .offer {
   align-self: stretch;
   display: flex;
-  width: 530px;
+  max-width: 530px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
   font-size: 16px;
@@ -367,6 +398,12 @@ main {
 .offer h1 span {
   font-style: italic;
   color: #b0907a;
+}
+@media (max-width: 767px) {
+  .offer h1 {
+    font-size: 43px;
+    line-height: 115%;
+  }
 }
 .offer p {
   font-feature-settings: "clig" off, "liga" off;
@@ -406,7 +443,6 @@ main {
   display: flex;
   width: 100%;
   max-width: 1360px;
-  height: 799px;
   flex-direction: column;
   align-items: center;
   gap: 40px;
@@ -424,12 +460,16 @@ main {
   color: #b0907a;
   font-style: italic;
 }
+@media (max-width: 767px) {
+  #favorites-coffee h2 {
+    font-size: 32px;
+  }
+}
 
 .slider {
   display: flex;
   width: 100%;
   max-width: 1360px;
-  height: 684px;
   flex-direction: column;
   align-items: center;
   gap: 40px;
@@ -437,7 +477,6 @@ main {
 
 .slider__container {
   display: flex;
-  height: 640px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -468,6 +507,11 @@ main {
     stroke: #e1d4c9;
   }
 }
+@media (max-width: 767px) {
+  .slider__container button {
+    display: none;
+  }
+}
 
 .slide {
   display: flex;
@@ -488,9 +532,16 @@ main {
   width: 480px;
   height: 480px;
 }
+@media (max-width: 767px) {
+  .slide__content img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+}
 
 .slide__content__description {
-  height: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -557,9 +608,9 @@ main {
   color: #b0907a;
   font-style: italic;
 }
-@media (max-width: 885px) {
-  #about {
-    margin-top: 70px;
+@media (max-width: 767px) {
+  #about h2 {
+    font-size: 32px;
   }
 }
 
@@ -605,6 +656,12 @@ main {
     width: 688px;
   }
 }
+@media (max-width: 767px) {
+  .image-long {
+    width: 100%;
+    max-width: 687px;
+  }
+}
 
 .image-short {
   width: 660px;
@@ -640,6 +697,12 @@ main {
   #mobile-app {
     flex-direction: column;
     align-items: flex-start;
+    gap: 100px;
+  }
+}
+@media (max-width: 767px) {
+  #mobile-app {
+    gap: 40px;
   }
 }
 
@@ -664,6 +727,11 @@ main {
   color: #b0907a;
   font-style: italic;
 }
+@media (max-width: 767px) {
+  .mobile-app__offer h2 {
+    font-size: 32px;
+  }
+}
 .mobile-app__offer p {
   color: #403f3d;
   font-size: 16px;
@@ -675,6 +743,7 @@ main {
 .mobile-app__offer > div {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 20px;
 }
 @media (max-width: 1170px) {
@@ -741,7 +810,14 @@ main {
 .mobile-app__screens {
   width: 630px;
   height: 630px;
-  background-image: url("/src/assets/img/mobile-screens.png");
+}
+@media (max-width: 767px) {
+  .mobile-app__screens {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
 }
 
 /* menu section */
