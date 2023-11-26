@@ -34,6 +34,10 @@
       color: $color-text-accent;
       font-style: italic;
     }
+
+    @media (max-width: 767px) {
+      font-size: 32px;
+    }
   }
 }
 
@@ -85,6 +89,10 @@
       }
     }
   }
+
+  @media (max-width: 370px) {
+    flex-direction: column;
+  }
 }
 
 button.active {
@@ -105,6 +113,10 @@ button.active {
   @media (max-width: 1089px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media (max-width: 699px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 
@@ -119,6 +131,11 @@ button.active {
   border-radius: 40px;
   border: 1px solid $color-border-light;
   background-color: $color-background-body;
+
+  @media (max-width: 370px) {
+    width: 100%;
+    max-width: 308px;
+  }
 }
 
 
@@ -127,7 +144,11 @@ button.active {
   height: 310px;
   flex-shrink: 0;
   border-radius: 40px;
-  // background-image: url('/src/assets/img/coffee-1.jpg');
+  
+  @media (max-width: 370px) {
+    width: 100%;
+    max-width: 308px;
+  }
 }
 
 .product-card__description {
