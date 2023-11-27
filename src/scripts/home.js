@@ -10,6 +10,7 @@ import "./../assets/img/logo.png"
 import "./../assets/img/mobile-screens.png"
 import "./../assets/svg/coffee-cup.svg"
 import "./../assets/img/favicon.ico"
+import "./../assets/video/coffee-cook.mp4"
 
 
 

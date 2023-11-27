@@ -38,6 +38,16 @@ module.exports = {
             outputPath: 'assets/svg/'
           }
         }]
+      },
+      {
+        test: /\.mp4$/i,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'assets/video/'
+          }
+        }]
       }
     ],
   },

@@ -10,17 +10,29 @@ main {
 
 /* enjoy section */
 #enjoy {
+  position: relative;
   margin-top: -80px;
   width: 100%;
   max-width: 1360px;
   border-radius: 40px;
-  background: url('/src/assets/img/img-hero.png'), lightgray 50% / cover no-repeat;
-  background-position: center;
-  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  border-radius: 40px;
+  object-fit: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .enjoy__container {
+  position: relative;
   display: flex;
+  width: 100%;
   max-width: 1160px;
   padding: 100px;
   flex-direction: column;
@@ -54,6 +66,7 @@ main {
     line-height: 105%;
     color: $color-text-light;
     font-feature-settings: 'clig' off, 'liga' off;
+    text-align: start;
     span {
       font-style: italic;
       color: $color-text-accent;
