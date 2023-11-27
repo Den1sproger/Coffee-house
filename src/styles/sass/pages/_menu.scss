@@ -177,3 +177,24 @@ button.active {
   }
 }
 
+
+.refresh {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid $color-border-dark;
+  background-color: $color-background-body;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+
+.refresh.hidden {
+  display: none;
+}
+

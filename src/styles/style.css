@@ -1003,4 +1003,24 @@ button.active > strong {
   line-height: 150%;
 }
 
+.refresh {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid #665f55;
+  background-color: #e1d4c9;
+}
+@media (min-width: 769px) {
+  .refresh {
+    display: none;
+  }
+}
+
+.refresh.hidden {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
