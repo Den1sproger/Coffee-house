@@ -60,40 +60,56 @@ header {
 
 @media (max-width: 768px) {
   nav {
-    top: -100%;
-    width: 100%;
-    max-width: 688px;
-    height: 0;
+    top: 80px;
+    right: -100%;
+    width: 0;
+    height: 340px;
     position: fixed;
     background-color: #e1d4c9;
-    transition: all 0.3s;
+    transition: right 0.7s;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   nav.active {
-    top: 80px;
+    z-index: 999;
+    right: 0;
     padding-top: 60px;
-    height: 340px;
+    width: 100vw;
     font-size: 32px;
     padding-bottom: 100px;
   }
+}
+@media (max-width: 768px) and (max-width: 320px) {
+  nav.active {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
   .menu-page {
-    top: -100%;
-    width: 100%;
-    max-width: 688px;
+    right: -100%;
+    top: 579px;
+    width: 0;
+    height: 40px;
     position: fixed;
     background-color: #e1d4c9;
-    transition: all 0.3s;
+    transition: right 0.7s;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .menu-page.active {
-    top: 579px;
+    z-index: 999;
+    right: 0;
+    width: 100vw;
     font-size: 32px;
     padding-bottom: 200px;
+  }
+}
+@media (max-width: 768px) and (max-width: 320px) {
+  .menu-page.active {
+    font-size: 20px;
   }
 }
 .nav__list {
@@ -348,17 +364,29 @@ main {
 
 /* enjoy section */
 #enjoy {
+  position: relative;
   margin-top: -80px;
   width: 100%;
   max-width: 1360px;
   border-radius: 40px;
-  background: url("/src/assets/img/img-hero.png"), lightgray 50%/cover no-repeat;
-  background-position: center;
-  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  border-radius: 40px;
+  object-fit: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .enjoy__container {
+  position: relative;
   display: flex;
+  width: 100%;
   max-width: 1160px;
   padding: 100px;
   flex-direction: column;
@@ -394,6 +422,7 @@ main {
   line-height: 105%;
   color: #e1d4c9;
   font-feature-settings: "clig" off, "liga" off;
+  text-align: start;
 }
 .offer h1 span {
   font-style: italic;
@@ -910,20 +939,19 @@ main {
     background-color: #e1d4c9;
   }
 }
+.tabs button.active {
+  background-color: #665f55;
+}
+.tabs button.active span {
+  color: #e1d4c9;
+}
+.tabs button.active > strong {
+  background-color: #e1d4c9;
+}
 @media (max-width: 370px) {
   .tabs {
     flex-direction: column;
   }
-}
-
-button.active {
-  background-color: #665f55;
-}
-button.active span {
-  color: #e1d4c9;
-}
-button.active > strong {
-  background-color: #e1d4c9;
 }
 
 .menu__grid {
