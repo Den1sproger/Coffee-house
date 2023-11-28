@@ -90,13 +90,13 @@
     }
   }
 
+  button.active {
+    @include tabs-active;
+  }
+
   @media (max-width: 370px) {
     flex-direction: column;
   }
-}
-
-button.active {
-  @include tabs-active;
 }
 
 
