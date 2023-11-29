@@ -24,11 +24,15 @@ header {
   nav {
     top: 80px;
     right: -100%;
-    width: 0;
+    width: 100vw;
     height: 340px;
+    font-size: 32px;
+    z-index: 999;
+    padding-top: 60px;
+    padding-bottom: 100px;
     position: fixed;
     background-color: $color-background-body;
-    transition: right 0.7s;
+    transition: right 0.5s;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,12 +40,7 @@ header {
   }
 
   nav.active {
-    z-index: 999;
     right: 0;
-    padding-top: 60px;
-    width: 100vw;
-    font-size: 32px;
-    padding-bottom: 100px;
 
     @media (max-width: 320px) {
       font-size: 20px;
@@ -51,22 +50,21 @@ header {
   .menu-page {
     right: -100%;
     top: 579px;
-    width: 0;
+    z-index: 999;
+    width: 100vw;
     height: 40px;
     position: fixed;
+    font-size: 32px;
+    padding-bottom: 200px;
     background-color: $color-background-body;
-    transition: right 0.7s;
+    transition: right 0.5s;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .menu-page.active {
-    z-index: 999;
     right: 0;
-    width: 100vw;
-    font-size: 32px;
-    padding-bottom: 200px;
 
     @media (max-width: 320px) {
       font-size: 20px;
