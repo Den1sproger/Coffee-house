@@ -66,7 +66,15 @@ module.exports = {
       events: {
         onStart: {
           delete: ['dist'],
-        }
+        },
+        onEnd: {
+          copy: [
+            {
+              source: path.resolve(__dirname, 'src/assets/jsons/'),
+              destination: path.resolve(__dirname, 'dist/assets/jsons/'),
+            },
+          ],
+        },
       }
     })
   ],
