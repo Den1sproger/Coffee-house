@@ -998,6 +998,9 @@ video {
   .menu__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .menu__grid .product-card:nth-child(n+5) {
+    display: none;
+  }
 }
 @media (max-width: 699px) {
   .menu__grid {
@@ -1070,7 +1073,7 @@ video {
   border: 1px solid #665f55;
   background-color: #e1d4c9;
 }
-@media (min-width: 769px) {
+@media (min-width: 1090px) {
   .refresh {
     display: none;
   }
