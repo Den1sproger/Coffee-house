@@ -1,9 +1,24 @@
 import "./../styles/sass/main.scss"
-import "./../assets/img/coffee-1.jpg"
-import "./../assets/img/coffee-2.jpg"
-import "./../assets/img/coffee-3.jpg"
-import "./../assets/img/coffee-4.jpg"
-import "./../assets/img/coffee-5.jpg"
-import "./../assets/img/coffee-6.jpg"
-import "./../assets/img/coffee-7.jpg"
-import "./../assets/img/coffee-8.jpg"
+import * as burger from './burgerButton.js'
+import * as products from './products.js'
+
+
+
+// ---- BURGER MENU ----
+burger.burgerButton.addEventListener('click', burger.changeBurgerMenu)
+burger.menuLink.addEventListener('click', burger.changeBurgerMenu)
+
+for (let navLink of burger.navigationLinks) {
+  navLink.addEventListener('click', burger.changeBurgerMenu)
+}
+
+burger.body.addEventListener('click', burger.handlerBodyClick)
+
+
+
+// ---- MENU SECTION ----
+document.addEventListener('DOMContentLoaded', products.getProductsDataFromJSON)
+window.addEventListener('load', products.setActiveTab)
+for (let button of products.tabsButtons) {
+  button.addEventListener('click', products.setActiveTab)
+}

@@ -26,7 +26,7 @@ module.exports = {
         ],
 	    },
       {
-        test: /\.(png|jpg|jpeg|ttf|ico)$/i,
+        test: /\.ttf$/i,
         type: 'asset/resource'
       },
       {
@@ -73,6 +73,10 @@ module.exports = {
               source: path.resolve(__dirname, 'src/assets/jsons/'),
               destination: path.resolve(__dirname, 'dist/assets/jsons/'),
             },
+            {
+              source: path.resolve(__dirname, 'src/assets/img/'),
+              destination: path.resolve(__dirname, 'dist/assets/img/'),
+            }
           ],
         },
       }
