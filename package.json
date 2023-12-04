@@ -7,7 +7,7 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "watch": "webpack --mode development --watch",
-    "start": "webpack serve --mode development --open pages/home.html",
+    "serve": "webpack serve --mode development --open pages/home.html",
     "compile-css": "sass src/styles/sass/main.scss src/styles/style.css"
   },
   "repository": {
