@@ -44,8 +44,8 @@ header {
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  font-size: 16px;
   font-style: normal;
+  font-size: 16px;
   font-weight: 600;
   line-height: 150%;
 }
@@ -240,26 +240,29 @@ h2 {
   align-self: stretch;
   color: #e1d4c9;
   font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Heading/heading-2 */
   font-size: 60px;
   font-weight: 600;
-  line-height: 125%; /* 75px */
+  line-height: 125%;
 }
 h2 span {
   color: #b0907a;
   font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Heading/heading-2.accent */
   font-size: 60px;
-  font-style: italic;
   font-weight: 600;
   line-height: 125%;
+  font-style: italic;
 }
 @media (max-width: 767px) {
   h2 {
     font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
   }
   h2 span {
     font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+    font-style: italic;
   }
 }
 
@@ -298,10 +301,9 @@ h2 span {
   align-self: stretch;
   color: #e1d4c9;
   font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Heading/heading-3 */
   font-size: 24px;
   font-weight: 600;
-  line-height: 125%; /* 30px */
+  line-height: 105%;
 }
 
 .contacts {
@@ -310,7 +312,6 @@ h2 span {
   justify-content: center;
   align-items: flex-start;
   gap: 16px;
-  font-size: 16px;
 }
 .contacts a {
   display: flex;
@@ -319,6 +320,7 @@ h2 span {
   gap: 4px;
   color: #e1d4c9;
   font-feature-settings: "clig" off, "liga" off;
+  font-size: 16px;
   font-weight: 600;
   line-height: 150%;
   text-decoration: none;
@@ -342,6 +344,7 @@ h2 span {
   gap: 8px;
   color: #e1d4c9;
   font-feature-settings: "clig" off, "liga" off;
+  font-size: 16px;
   font-weight: 600;
   line-height: 150%;
 }
@@ -413,7 +416,6 @@ video {
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  font-size: 16px;
   font-style: normal;
 }
 .offer h1 {
@@ -425,17 +427,28 @@ video {
   text-align: start;
 }
 .offer h1 span {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 105%;
   font-style: italic;
   color: #b0907a;
 }
 @media (max-width: 767px) {
   .offer h1 {
-    font-size: 43px;
+    font-size: 42px;
+    font-weight: 600;
     line-height: 115%;
+  }
+  .offer h1 span {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 115%;
+    font-style: italic;
   }
 }
 .offer p {
   font-feature-settings: "clig" off, "liga" off;
+  font-size: 16px;
   font-weight: 400;
   line-height: 150%;
   color: #e1d4c9;
@@ -453,7 +466,8 @@ video {
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
   background-color: #e1d4c9;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 150%;
   cursor: pointer;
 }
@@ -482,16 +496,28 @@ video {
   color: #403f3d;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
+  font-size: 60px;
   font-weight: 600;
   line-height: 125%;
 }
 #favorites-coffee h2 span {
   color: #b0907a;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
   font-style: italic;
 }
 @media (max-width: 767px) {
   #favorites-coffee h2 {
     font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+  }
+  #favorites-coffee h2 span {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+    font-style: italic;
   }
 }
 
@@ -600,7 +626,7 @@ video {
   font-feature-settings: "clig" off, "liga" off;
   font-size: 24px;
   font-weight: 600;
-  line-height: 125%;
+  line-height: 105%;
 }
 .slide__content__description p {
   text-align: center;
@@ -658,17 +684,28 @@ video {
   font-feature-settings: "clig" off, "liga" off;
   /* Desktop/Heading/heading-2 */
   font-size: 60px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 125%; /* 75px */
+  line-height: 125%;
+  font-style: normal;
 }
 #about h2 span {
   color: #b0907a;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
   font-style: italic;
 }
 @media (max-width: 767px) {
   #about h2 {
     font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+  }
+  #about h2 span {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+    font-style: italic;
   }
 }
 
@@ -783,18 +820,29 @@ video {
 }
 .mobile-app__offer h2 span {
   color: #b0907a;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
   font-style: italic;
 }
 @media (max-width: 767px) {
   .mobile-app__offer h2 {
     font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+  }
+  .mobile-app__offer h2 span {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+    font-style: italic;
   }
 }
 .mobile-app__offer p {
   color: #403f3d;
-  font-size: 16px;
   font-feature-settings: "clig" off, "liga" off;
   align-self: stretch;
+  font-size: 16px;
   font-weight: 400;
   line-height: 150%;
 }
@@ -852,9 +900,9 @@ video {
   gap: 2px;
 }
 .offer-button__text span {
+  font-size: 10px;
   font-weight: 600;
   line-height: 140%;
-  font-size: 10px;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
 }
@@ -903,18 +951,28 @@ video {
   color: #403f3d;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Heading/heading-2 */
   font-size: 60px;
   font-weight: 600;
-  line-height: 125%; /* 75px */
+  line-height: 125%;
 }
 .menu__offer h1 span {
   color: #b0907a;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
   font-style: italic;
 }
 @media (max-width: 767px) {
   .menu__offer h1 {
     font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+  }
+  .menu__offer h1 span {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+    font-style: italic;
   }
 }
 
@@ -944,6 +1002,7 @@ video {
   background-color: #c1b6ad;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
+  font-size: 16px;
   font-weight: 600;
   line-height: 150%;
   border-radius: 100px;
@@ -1055,7 +1114,7 @@ video {
 .product-card__description h4 {
   font-size: 24px;
   font-weight: 600;
-  line-height: 125%;
+  line-height: 105%;
 }
 .product-card__description p {
   font-size: 16px;

@@ -24,19 +24,18 @@
     color: $color-text-dark;
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
-
-    /* Desktop/Heading/heading-2 */
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 125%; /* 75px */
+    @include heading-2;
 
     span {
       color: $color-text-accent;
-      font-style: italic;
+      @include heading-2(true);
     }
 
     @media (max-width: 767px) {
-      font-size: 32px;
+      @include mobile-heading-2;
+      span {
+        @include mobile-heading-2(true);
+      }
     }
   }
 }
@@ -68,8 +67,7 @@
       background-color: $color-border-light;
       text-align: center;
       font-feature-settings: 'clig' off, 'liga' off;
-      font-weight: 600;
-      line-height: 150%;
+      @include linkButton;
       border-radius: 100px;
       transition: all 0.3s;
     }
@@ -77,9 +75,7 @@
     span {
       color: $color-text-dark;
       font-feature-settings: 'clig' off, 'liga' off;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 150%;
+      @include linkButton;
       transition: all 0.3s;
     }
 
@@ -167,15 +163,11 @@
   font-feature-settings: 'clig' off, 'liga' off;
 
   h4 {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 125%;
+    @include heading-3;
   }
 
   p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%;
+    @include medium;
   }
 }
 
