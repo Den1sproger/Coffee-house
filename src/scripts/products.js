@@ -1,9 +1,25 @@
 const tabsButtons = document.querySelectorAll('.tabs button')
 const menuGrid = document.querySelector('.menu__grid')
 const refreshButton = document.querySelector('.refresh')
+const backdrop = document.querySelector('.backdrop')
+const modal = document.querySelector('.modal')
+const body = document.querySelector('body')
 let productCurrentShow = 5
 let currentProductCount
 let productsData
+
+// modal variables
+const modalPhoto = document.querySelector('.modal .product-card__image')
+const modalName = document.querySelector('#modal-name')
+const modalDescription = document.querySelector('#modal-desc')
+const modalSizes = document.querySelectorAll('.size__tabs .tab__button')
+const modalAdditivies = document.querySelectorAll('.additives__tabs .tab__button')
+const modalPrice = document.querySelector('.total__price')
+const closeButton = document.querySelector('.close')
+let currentModalSize = 's'
+let currentModalIndex
+let currentModalPrice
+
 
 
 
@@ -35,11 +51,14 @@ async function getProductsDataFromJSON() {
 
 
 function setCurrentProducts(currentProductId) {
-  const productCards = document.querySelectorAll('.product-card')
-  for (let card of productCards) {
+  // remove old cards
+  const oldProductCards = document.querySelectorAll('.product-card')
+  for (let card of oldProductCards) {
+    card.removeEventListener('click', selectProduct)
     card.remove()
   }
 
+  // set new cards
   let insertProductsHTML = ''
 
   for (let product of productsData) {
@@ -59,6 +78,12 @@ function setCurrentProducts(currentProductId) {
     currentProductCount++
   }
   menuGrid.insertAdjacentHTML('afterbegin', insertProductsHTML)
+
+  // add new event listeners
+  const newProductsCards = document.querySelectorAll('.product-card')
+  newProductsCards.forEach((card) => {
+    card.addEventListener('click', selectProduct)
+  })
 }
 
 
@@ -91,11 +116,117 @@ function showOtherProducts() {
 
 
 
+function selectProduct(event) {
+  const prodCard = event.target.closest('.product-card')
+  const productName = prodCard.querySelector('h4').textContent
+
+  for (let i = 0; i < productsData.length; i++) {
+    const product = productsData[i]
+
+    if (product.name === productName) {
+      currentModalIndex = i
+      currentModalPrice = Number(product.price)
+
+      const photo = product.name.toLowerCase().replaceAll(' ', '-')
+      modalPhoto.src = `./../assets/img/${photo}.jpg`
+      modalName.textContent = product.name
+      modalDescription.textContent = product.description
+      modalPrice.textContent = `$${product.price}`
+
+      for (let sizeBtn of modalSizes) {
+        const span = sizeBtn.querySelector('span')
+        span.textContent = product.sizes[sizeBtn.id].size
+      }
+      modalSizes[0].classList.add('active')
+
+      for (let i = 0; i < modalAdditivies.length; i++) {
+        const addBtn = modalAdditivies[i]
+        addBtn.querySelector('span').textContent = product.additives[i].name
+      }
+      break
+    }
+  }
+
+  backdrop.classList.remove('hidden')
+  modal.classList.remove('hidden')
+  body.classList.add('lock')
+}
+
+
+
+function unselectProduct() {
+  currentModalSize = 's'
+  modalSizes.forEach((size) => {
+    size.classList.remove('active')
+  })
+  modalAdditivies.forEach((size) => {
+    size.classList.remove('active')
+  })
+  backdrop.classList.add('hidden')
+  modal.classList.add('hidden')
+  body.classList.remove('lock')
+}
+
+
+
+function setModalSize(event) {
+  const button = event.target.closest('.tab__button')
+  if (button.classList.contains('active')) return
+    
+  for (let size of modalSizes) {
+    if (size.id === button.id) {
+      size.classList.add('active')
+      const sizePrice = Number(
+        productsData[currentModalIndex].sizes[size.id]['add-price']
+      )
+      currentModalPrice += sizePrice
+
+    } else if (size.id === currentModalSize) {
+      size.classList.remove('active')
+      const sizePrice = Number(
+        productsData[currentModalIndex].sizes[size.id]['add-price']
+      )
+      currentModalPrice -= sizePrice
+    }
+  }
+  currentModalSize = button.id
+  modalPrice.textContent = `$${currentModalPrice.toFixed(2)}`
+}
+
+
+
+function setModalAdditive(event) {
+  const button = event.target.closest('.tab__button')
+
+  if (button.classList.contains('active')) {
+    const addPrice = Number(
+      productsData[currentModalIndex].additives[button.tabIndex]['add-price']
+    )
+    currentModalPrice -= addPrice
+  } else {
+    const addPrice = Number(
+      productsData[currentModalIndex].additives[button.tabIndex]['add-price']
+    )
+    currentModalPrice += addPrice
+  }
+  button.classList.toggle('active')
+  modalPrice.textContent = `$${currentModalPrice.toFixed(2)}`
+}
+
+
+
 export {
   tabsButtons,
   refreshButton,
+  backdrop,
+  closeButton,
+  modalSizes,
+  modalAdditivies,
   setActiveTab,
   getProductsDataFromJSON,
   checkRefreshButton,
-  showOtherProducts
+  showOtherProducts,
+  unselectProduct,
+  setModalSize,
+  setModalAdditive
 }

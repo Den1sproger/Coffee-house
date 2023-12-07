@@ -22,3 +22,12 @@ products.tabsButtons.forEach((button) => {
   button.addEventListener('click', products.setActiveTab)
 })
 products.refreshButton.addEventListener('click', products.showOtherProducts)
+products.backdrop.addEventListener('click', products.unselectProduct)
+products.closeButton.addEventListener('click', products.unselectProduct)
+
+products.modalSizes.forEach((size) => {
+  size.addEventListener('click', products.setModalSize)
+})
+products.modalAdditivies.forEach((additive) => {
+  additive.addEventListener('click', products.setModalAdditive)
+})

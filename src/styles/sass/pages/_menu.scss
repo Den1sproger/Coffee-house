@@ -47,53 +47,55 @@
   align-items: center;
   gap: 16px;
 
-  button {
-    display: flex;
-    padding: 8px 16px 8px 8px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    border-radius: 100px;
-    border: 1px solid $color-border-light;
-    background-color: $color-background-body;
-    transition: all 0.3s;
-
-    & > strong {
-      width: 30px;
-      height: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: $color-border-light;
-      text-align: center;
-      font-feature-settings: 'clig' off, 'liga' off;
-      @include linkButton;
-      border-radius: 100px;
-      transition: all 0.3s;
-    }
-
-    span {
-      color: $color-text-dark;
-      font-feature-settings: 'clig' off, 'liga' off;
-      @include linkButton;
-      transition: all 0.3s;
-    }
-
-    @media (min-width: 1024px) {
-      &:hover {
-        @include tabs-active;
-      }
-    }
-  }
-
-  button.active {
-    @include tabs-active;
-  }
-
   @media (max-width: 370px) {
     flex-direction: column;
   }
+
+  @media (min-width: 1024px) {
+    &.tab__button:hover {
+      @include tabs-active;
+    }
+  }
 }
+
+
+.tab__button {
+  display: flex;
+  padding: 8px 16px 8px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  border: 1px solid $color-border-light;
+  background-color: $color-background-body;
+  transition: all 0.3s;
+
+  & > strong {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-border-light;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    @include linkButton;
+    border-radius: 100px;
+    transition: all 0.3s;
+  }
+
+  span {
+    color: $color-text-dark;
+    font-feature-settings: 'clig' off, 'liga' off;
+    @include linkButton;
+    transition: all 0.3s;
+  }
+}
+
+.tab__button.active {
+  @include tabs-active;
+}
+
 
 
 .menu__grid {
@@ -192,3 +194,170 @@
   display: none;
 }
 
+
+
+.backdrop {
+  position: fixed;
+  z-index: 998;
+  background-color: $color-background-backdrop;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+}
+
+
+.backdrop.hidden {
+  display: none;
+}
+
+.modal {
+  z-index: 999;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 40px;
+  background-color: #E1D4C9;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: 900px) {
+    width: 768px;
+  }
+
+  @media (max-width: 899px) and (min-width: 700px) {
+    width: 656px;
+  }
+
+  @media (max-width: 699px) {
+    width: 310px;
+    .product-card__image {
+      display: none;
+    }
+    
+    .modal__description {
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 360px) {
+    max-width: 270px;
+  }
+}
+
+
+.modal.hidden {
+  display: none;
+}
+
+
+.modal__description {
+  display: flex;
+  margin-left: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1 0 0;
+
+  .additives,
+  .title,
+  .size {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+
+  .title {
+    gap: 12px;
+
+    h4 {
+      align-self: stretch;
+      color: $color-text-dark;
+      font-feature-settings: 'clig' off, 'liga' off;
+
+      font-style: normal;
+      @include heading-3;
+    }
+
+    p {
+      align-self: stretch;
+      color: $color-text-dark;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-style: normal;
+      @include medium;
+    }
+  }
+
+  .additives__tabs,
+  .size__tabs {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    flex-wrap: wrap;
+  }
+
+
+  .additives,
+  .size {
+    gap: 8px;
+  }
+
+
+  .total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+
+    h4 {
+      color: $color-text-dark;
+      font-feature-settings: 'clig' off, 'liga' off;
+      @include heading-3;
+      font-style: normal;
+    }
+  }
+
+
+  .alert {
+    display: flex;
+    padding: 12px 0px;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    border-top: 1px solid $color-border-light;
+
+    p {
+      color: $color-text-dark;
+      font-feature-settings: 'clig' off, 'liga' off;
+      @include caption;
+      font-style: normal;
+    }
+  }
+
+
+  .close {
+    display: flex;
+    padding: 10px 78px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 100px;
+    border: 1px solid $color-border-dark;
+    background-color: $color-background-body;
+    color: $color-text-dark;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    @include linkButton;
+    font-style: normal;
+  }
+
+}
