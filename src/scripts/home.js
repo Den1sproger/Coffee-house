@@ -8,10 +8,9 @@ import * as carousel from './carousel.js'
 // ---- BURGER MENU ----
 burger.burgerButton.addEventListener('click', burger.changeBurgerMenu)
 burger.menuLink.addEventListener('click', burger.changeBurgerMenu)
-
-for (let navLink of burger.navigationLinks) {
+burger.navigationLinks.forEach((navLink) => {
   navLink.addEventListener('click', burger.changeBurgerMenu)
-}
+})
 
 burger.body.addEventListener('click', burger.handlerBodyClick)
 
