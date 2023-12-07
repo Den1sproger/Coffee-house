@@ -14,6 +14,14 @@ function changeBurgerMenu() {
 }
 
 
+function hideBurgerMenu() {
+  burgerButton.classList.remove('active')
+  navigation.classList.remove('active')
+  menuLink.classList.remove('active')
+  body.classList.remove('lock')
+}
+
+
 function handlerBodyClick(event) {
   const target = event.target
 
@@ -35,5 +43,6 @@ export {
   menuLink,
   navigationLinks,
   changeBurgerMenu,
-  handlerBodyClick
+  handlerBodyClick,
+  hideBurgerMenu
 }

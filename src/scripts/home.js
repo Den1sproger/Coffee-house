@@ -9,7 +9,7 @@ import * as carousel from './carousel.js'
 burger.burgerButton.addEventListener('click', burger.changeBurgerMenu)
 burger.menuLink.addEventListener('click', burger.changeBurgerMenu)
 burger.navigationLinks.forEach((navLink) => {
-  navLink.addEventListener('click', burger.changeBurgerMenu)
+  navLink.addEventListener('click', burger.hideBurgerMenu)
 })
 
 burger.body.addEventListener('click', burger.handlerBodyClick)
