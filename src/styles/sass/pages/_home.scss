@@ -96,9 +96,9 @@ video {
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
     background-color: $color-background-body;
-    @include medium;
+    @include linkButton;
     cursor: pointer;
-
+    
     & img {
       display: none;
       transition: all 0.3s;
