@@ -1,3 +1,4 @@
+import "./../assets/svg/coffee-cup.svg";
 import "./../styles/sass/main.scss";
 import "./../assets/video/coffee-cook.mp4";
 
